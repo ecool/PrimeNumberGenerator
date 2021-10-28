@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/LMZO8l3gO5oLrLR/nAs+GwO07VIYN+LE+j/rsfGazBVwWE4IIv2zJ1Ib7TG+QlFkKJoyynz+by53gIR/JlrEw==",
+  "success": true,
+  "projectFilePath": "E:\\code\\PrimeNumberGenerator\\PrimeNumberGenerator.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ecool\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
