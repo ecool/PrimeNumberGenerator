@@ -72,9 +72,19 @@ let main argv =
     let mutable number = 0
     if Int32.TryParse(max, &number) then
       printfn "Find prime numbers up to: %d" number
-        
+
       // Generate a list of primes and print them
-      printList (generatePrimes number)
+      let primeList = generatePrimes number
+      
+      // Get size of list of primes (number of primes calculated)
+      let numOfPrimes = List.length primeList
+      
+      // Print out list of primes
+      printList primeList
+
+      // Print out size of list of primes
+      printf "\n\n\nYou generated %d of primes!\n\n\n" numOfPrimes
+
       0
     else 
       printfn "Error parsing input!"
