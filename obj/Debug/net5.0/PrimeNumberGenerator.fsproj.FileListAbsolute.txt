@@ -24,3 +24,4 @@ E:\code\PrimeNumberGenerator\obj\Debug\net5.0\PrimeNumberGenerator.AssemblyInfo.
 E:\code\PrimeNumberGenerator\obj\Debug\net5.0\PrimeNumberGenerator.dll
 E:\code\PrimeNumberGenerator\obj\Debug\net5.0\PrimeNumberGenerator.pdb
 E:\code\PrimeNumberGenerator\obj\Debug\net5.0\PrimeNumberGenerator.genruntimeconfig.cache
+E:\code\PrimeNumberGenerator\obj\Debug\net5.0\PrimeNumberGenerator.fsproj.CopyComplete

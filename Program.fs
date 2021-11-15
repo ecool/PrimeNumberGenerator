@@ -20,7 +20,7 @@ let sqrttoint n =
 // Function that determines if `number` is a prime
 let isPrime number =
     // list of numbers ranging from `12` => `(number / 2) + 1`
-    let max = sqrttoint number
+    let max = (fun n -> (int (sqrt (float n)))) number
 
     // Create a list of numbers from `2` to `max`
     let range = [ 2 .. max ]
