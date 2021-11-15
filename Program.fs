@@ -13,7 +13,9 @@ let isDivisible n1 n2 =
 
 // Function that will calculate and return the square root of the Integer
 // argument, and return an integer value.
-let sqrttoint n = (int (sqrt (float n)))
+let sqrttoint n =
+    // convert paramter to float, sqare root, then convert back to integer
+    (int (sqrt (float n)))
 
 // Function that determines if `number` is a prime
 let isPrime number =
@@ -49,8 +51,6 @@ let printList list =
         printf "%5d " num
         if count % 10 = 0 then printf "\n"
         count <- count + 1
-
-
 
 // Main Entry to the Application
 [<EntryPoint>]
