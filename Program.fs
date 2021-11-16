@@ -1,3 +1,4 @@
+
 // Eric Cool and Brett Bernardi
 // Organization of Programming Languages
 // Project
@@ -11,50 +12,53 @@ let isDivisible n1 n2 =
     // modulus check
     n1 % n2 = 0
 
+// Shows explicit type declarations
+let isDivisible2 (n1:int) (n2:int) : bool = 
+    // modulus check
+    n1 % n2 = 0
+
 // Function that will calculate and return the square root of the Integer
 // argument, and return an integer value.
-let sqrttoint n =
-    // convert paramter to float, sqare root, then convert back to integer
-    (int (sqrt (float n)))
+let sqrttoint n = (int (sqrt (float n)))
 
 // Function that determines if `number` is a prime
 let isPrime number =
-    // list of numbers ranging from `12` => `(number / 2) + 1`
+    // calculates square root of number, then floors the number by casting to int
     let max = (fun n -> (int (sqrt (float n)))) number
 
     // Create a list of numbers from `2` to `max`
     let range = [ 2 .. max ]
 
-    // allow count to be changed (mutable)
-    let mutable count = 0
+    // filer the range list [2-max] 
+    let listOfFactors = range |> List.filter (isDivisible (number))
 
-    // iterate over the list `range`
-    for num in range do
-        // check if `number` can be divided by `num`
-        if isDivisible number num then
-            // increment the counter
-            count <- count + 1
-    // true/false
-    count = 0 // if `count == 0` then it is a prime number
+    // return true if listOfFactors is zero!
+    listOfFactors.IsEmpty 
 
 // Function to generate a list of primes up to the given `number`
 let generatePrimes number =
     // Filter a list from [`2` => `number`] if they are prime
-    List.filter isPrime [ 2 .. number ]
+    let possiblePrimesList = [2 .. number]
+    // pipes possiblePrimesList to the List.filter function
+    let primesList = possiblePrimesList |> List.filter (isPrime)
+    primesList
 
 // Function that will print out a list, with a new line inserted after
 // every 10 elements
 let printList list =
     let mutable count = 1
 
+    // for ... in loop
     for num in list do
         printf "%5d " num
         if count % 10 = 0 then printf "\n"
         count <- count + 1
 
+
 // Main Entry to the Application
 [<EntryPoint>]
 let main argv =
+
     printfn "Generate Prime Numbers\n\n"
 
     printf "Find prime numbers from 1 - "
