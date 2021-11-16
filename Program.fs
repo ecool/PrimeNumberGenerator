@@ -22,7 +22,6 @@ let sqrttoint n = (int (sqrt (float n)))
 
 // Function that determines if `number` is a prime
 let isPrime number =
-    // calculates square root of number, then floors the number by casting to int
     // inline lambda expression form of `sqrttoint`
     let max = (fun n -> (int (sqrt (float n)))) number
 
